@@ -1,0 +1,79 @@
+html,
+body {
+  margin: 0;
+  padding: 0;
+  border-size: border-box;
+}
+
+.panels {
+  min-height: 100vh;
+  overflow: hidden;
+  display: flex;
+}
+
+.panel {
+  font-size: 35px;
+  color: #000;
+  background-size: cover;
+  background-position: center;
+  flex: 1;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+.panel > * {
+  margin: 0;
+  width: 100%;
+  flex: 1 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.panel > *:first-child {
+  transform: translateY(-100%);
+}
+
+.panel > *:last-child {
+  transform: translateY(100%);
+  transition: 1.4s ease;
+}
+
+.panel.opne-active > *:first-child {
+  transform: translateY(0%);
+  transition: 1.4s ease;
+}
+
+.panel.opne-active > *:last-child {
+  transform: translateY(0%);
+}
+
+.panel.open {
+  flex: 3;
+  font-size: 50px;
+  transform: translateY(0);
+  transition: 1.4s ease;
+}
+
+.panel_1 {
+  background-image: url("http://www.sciencemag.org/sites/default/files/styles/article_main_large/public/images/DanceYourPHD16_9.jpg?itok=f4bYg735");
+}
+
+.panel_2 {
+  background-image: url("https://images.pexels.com/photos/257360/pexels-photo-257360.jpeg?auto=compress&cs=tinysrgb&h=350");
+}
+
+.panel_3 {
+  background-image: url("https://cdn.pixabay.com/photo/2012/04/05/01/24/dice-25637_1280.png");
+}
+
+.panel_4 {
+  background-image: url("https://timedotcom.files.wordpress.com/2014/03/improving-life-health-hiking-nature.jpg");
+}
+
+.panel_5 {
+  background-image: url("https://d2v9y0dukr6mq2.cloudfront.net/video/thumbnail/slow-motion-destroying-sheet-of-glass_b1zjvqpxh__F0000.png");
+}
